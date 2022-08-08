@@ -1,0 +1,54 @@
+//auth register
+POST  http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "username" : "username03",
+  "password" : "123456"
+}
+
+###
+// auth login
+POST  http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "username" : "username01",
+  "password" : "123456"
+}
+
+###
+//create post user
+POST  http://localhost:5000/api/posts/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmVmMWJlM2E5NThmZjNhMzBmNzU5YzYiLCJpYXQiOjE2NTk4NDY5NzR9.60xoGStHekki7YpfAZQAmByDqgeqT4uQD5NKmcLj1GM
+
+{
+  "title" : "title 21321312312",
+  "description" : "description312321",
+  "url" : "google.com",
+  "status" : "To learn"
+}
+
+###
+//get all posts user
+GET   http://localhost:5000/api/posts/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmVmMWI3N2EzMjFmOGNmZGJiNTc3MGEiLCJpYXQiOjE2NTk5NDE2ODV9.zeYv9UrlUetUw0kBnQAcI1_uAs8XXldX7GxlIcCpG74
+
+###
+//update post user
+PUT http://localhost:5000/api/posts/62f0b155d778e0c6f8eaa054
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmVmMWI3N2EzMjFmOGNmZGJiNTc3MGEiLCJpYXQiOjE2NTk5NDE2ODV9.zeYv9UrlUetUw0kBnQAcI1_uAs8XXldX7GxlIcCpG74
+
+{
+  "title" : "title newdasdsa"
+}
+
+###
+//delete post user
+DELETE http://localhost:5000/api/posts/62ef301660f9da919c45f594
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmVmMWJlM2E5NThmZjNhMzBmNzU5YzYiLCJpYXQiOjE2NTk4NDc4NjB9.Kg12suWFGHQ-f_QeM08PAYZUhIPN2CHUwt0QNJRjLmg
+
